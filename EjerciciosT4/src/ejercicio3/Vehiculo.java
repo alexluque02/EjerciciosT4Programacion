@@ -5,7 +5,7 @@ public class Vehiculo {
 	private int cilindrada;
 	private int potencia;
 	private String categoriaEmisiones;
-	private int impuesto;
+	private int impuesto;//No es un atributo de vehículo
 	
 	public Vehiculo(int cilindrada, int potencia, String categoriaEmisiones, int impuesto) {
 		super();
@@ -56,13 +56,13 @@ public class Vehiculo {
 	//(cero, ECO, tipo B y tipo C)
 	
 	public int calcularImpuesto() {
-		if(categoriaEmisiones.equalsIgnoreCase("cero")) {
+		if(categoriaEmisiones.equalsIgnoreCase("cero")) {//SWITCH!!!!!!guarro
 			return impuesto=0;
 		}else if(categoriaEmisiones.equalsIgnoreCase("ECO")) {
 			return impuesto=50;
 		}else if(categoriaEmisiones.equalsIgnoreCase("tipo B")){
 			return impuesto=75;
-		}else { //Si se equivocan es tipo a, el impuesto más alto
+		}else { //Si se equivocan es tipo c, el impuesto más alto
 			return impuesto=100;
 		}
 	}

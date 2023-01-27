@@ -15,9 +15,9 @@ public class Motocicleta extends Vehiculo{
 				+ "]";
 	}
 
-	public int calcularImpuesto() {
-		int impuesto=super.calcularImpuesto();
-		impuesto+=(int)super.getCilindrada()*0.6;
+	public int calcularImpuesto() { //El porcentaje hay que pedirlo en el main porque por el tiempo puede cambiar
+		int impuesto=calcularImpuesto();
+		impuesto+=(int)getCilindrada()*0.6;
 		return impuesto;
 	}
 }
