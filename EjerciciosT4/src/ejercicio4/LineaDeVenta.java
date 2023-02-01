@@ -37,6 +37,9 @@ public class LineaDeVenta {
 	}
 	
 	public void mostrarProducto(){
+		if(p instanceof Alimentacion) {
+			((Alimentacion) p).avisarCaducacion();
+		}
 		System.out.printf("Cod.:%d  %s x %d %.2f€\n", p.getCodigo(), p.getNombre(), getCantidad(), p.getPrecio());
 	}
 }

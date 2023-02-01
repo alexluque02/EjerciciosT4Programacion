@@ -38,19 +38,17 @@ public class Principal {
 				menu2 = Leer.datoInt();
 				switch (menu2) {
 				case 1:
-					lista[i] = new LineaDeVenta(new Alimentacion(codigo, nombre, precio), cantidad);
 					System.out.println("Cuantos días falta para que caduque");
 					numDias = Leer.datoInt();
-					lista[i].getP().calcularPrecio(numDias);
-					lista[i].getP().setPrecio(lista[i].getP().calcularPrecio(numDias));
+					lista[i] = new LineaDeVenta(new Alimentacion(codigo, nombre, precio, numDias), cantidad);
+					lista[i].getP().setPrecio(lista[i].getP().calcularPrecio());
 					i++;
 					break;
 				case 2:
-					lista[i] = new LineaDeVenta(new Electronica(codigo, nombre, precio), cantidad);
 					System.out.println("Diga el impuesto sobre lujo del producto");
 					porc = Leer.datoInt();
-					lista[i].getP().calcularPrecio(porc);
-					lista[i].getP().setPrecio(lista[i].getP().calcularPrecio(porc));
+					lista[i] = new LineaDeVenta(new Electronica(codigo, nombre, precio, porc), cantidad);
+					lista[i].getP().setPrecio(lista[i].getP().calcularPrecio());
 					i++;
 					break;
 				case 3:

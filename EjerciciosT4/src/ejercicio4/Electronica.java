@@ -2,13 +2,37 @@ package ejercicio4;
 
 public class Electronica extends Producto{
 
-	public Electronica(int codigo, String nombre, double precio) {
+	private int porcentaje;
+	
+
+	public Electronica(int codigo, String nombre, double precio, int porcentaje) {
 		super(codigo, nombre, precio);
-		// TODO Auto-generated constructor stub
+		this.porcentaje = porcentaje;
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Electronica [porcentaje=" + porcentaje + "]";
 	}
 
-	public double calcularPrecio(int desc) {
+
+
+	public int getPorcentaje() {
+		return porcentaje;
+	}
+
+
+
+	public void setPorcentaje(int porcentaje) {
+		this.porcentaje = porcentaje;
+	}
+
+
+
+	public double calcularPrecio() {
 		double div=100;
-		return super.getPrecio()*(int)desc/div;
+		return super.getPrecio()*(int)porcentaje/div;
 	}
 }

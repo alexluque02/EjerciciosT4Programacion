@@ -38,8 +38,8 @@ public abstract class Producto {
 
 	@Override
 	public String toString() {
-		return "Producto [codigo=" + codigo + ", nombre=" + nombre + ", precio=" + precio + "]";
+		return getClass().getSimpleName()+"[codigo=" + codigo + ", nombre=" + nombre + ", precio=" + precio + "]";
 	}
 	
-	public abstract double calcularPrecio(int num);
+	public abstract double calcularPrecio();
 }

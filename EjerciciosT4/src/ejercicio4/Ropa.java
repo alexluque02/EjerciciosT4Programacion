@@ -7,7 +7,7 @@ public class Ropa extends Producto{
 		// TODO Auto-generated constructor stub
 	}
 
-	public double calcularPrecio(int num) {
+	public double calcularPrecio() {
 		return super.getPrecio();
 	}
 }
