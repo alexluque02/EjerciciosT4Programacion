@@ -33,6 +33,6 @@ public class Electronica extends Producto{
 
 	public double calcularPrecio() {
 		double div=100;
-		return super.getPrecio()*(int)porcentaje/div;
+		return super.getPrecio()*(double)porcentaje/div;
 	}
 }

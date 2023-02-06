@@ -38,7 +38,7 @@ public class Alimentacion extends Producto{
 		}
 	}
 	
-	public void avisarCaducacion() {
+	public void avisarCaducidad() {
 		if(caducidad<=2) {
 			System.out.println("Al producto le quedan menos de dos días para caducar");
 		}

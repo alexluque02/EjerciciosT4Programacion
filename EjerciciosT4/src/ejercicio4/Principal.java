@@ -56,8 +56,10 @@ public class Principal {
 					i++;
 					break;
 				case 0:
+					System.out.println("No se ha añadido nada");
 					break;
 				default:
+					System.out.println("No se ha añadido nada");
 					break;
 				}
 				break;
