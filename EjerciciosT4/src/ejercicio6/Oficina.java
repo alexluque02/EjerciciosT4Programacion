@@ -25,10 +25,12 @@ public class Oficina {
 	}
 	
 	public void ingresarCuenta(Cuenta c, double cant) {
+		if(c.getSaldo()>0 && c!=null)
 		c.ingresar(cant);
 	}
 	
 	public void retirarCuenta(Cuenta c, double cant) {
+		if(c.getSaldo()>0 && c.getSaldo()-cant>0 && c!=null)
 		c.retirar(cant);
 	}
 	
@@ -36,7 +38,7 @@ public class Oficina {
 		int i=0;
 		boolean encontrado=false;
 		
-		while (i<lista.length && !encontrado) {
+		while (i<lista.length && !encontrado && lista[i]!=null) {
 			if(lista[i].getId()==id) {
 				encontrado=true;
 			}else {
@@ -64,7 +66,7 @@ public class Oficina {
 	
 	public double calcularGanado() {
 		double suma=0;
-		for (int i = 0; i < lista.length; i++) {
+		for (int i = 0; i < lista.length && lista[i]!=null; i++) {
 			if (lista[i] instanceof CuentaEmpresa) {
 				suma+=((CuentaEmpresa) lista[i]).getComision();
 			}
@@ -74,7 +76,7 @@ public class Oficina {
 	
 	public double calcularGastado() {
 		double suma=0;
-		for (int i = 0; i < lista.length; i++) {
+		for (int i = 0; i < lista.length && lista[i]!=null; i++) {
 			if (lista[i] instanceof CuentaJoven) {
 				suma+=((CuentaJoven) lista[i]).getBonificacion();
 			}

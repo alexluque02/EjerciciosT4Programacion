@@ -46,12 +46,12 @@ public class CuentaCorriente extends Cuenta{
 
 	public void ingresar(double cant) {
 		super.ingresar(cant);
-		puntos++;
+		puntos+=1;
 	}
 	
 	public void retirar(double cant) {
 		super.retirar(cant);
-		puntos++;
+		puntos+=1;
 	}
 	
 	

@@ -1,6 +1,6 @@
 package ejercicio6;
 
-public class Cuenta {
+public class Cuenta {//Abstracta es la mejor opción
 
 	private double saldo;
 	private int id;
