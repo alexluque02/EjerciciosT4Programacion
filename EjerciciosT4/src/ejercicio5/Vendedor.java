@@ -5,24 +5,29 @@ public class Vendedor extends Empleado{
 	private int cantVentas;
 	private double incentivo;
 	
-	public Vendedor(String nombre, String apellidos, double sueldoBase, int nEmpleado, int cantVentas,
+	public Vendedor(String nombre, String apellidos, double sueldoB, int numEmpleado, int cantVentas,
 			double incentivo) {
-		super(nombre, apellidos, sueldoBase, nEmpleado);
+		super(nombre, apellidos, sueldoB, numEmpleado);
 		this.cantVentas = cantVentas;
 		this.incentivo = incentivo;
 	}
+
 	public int getCantVentas() {
 		return cantVentas;
 	}
+
 	public void setCantVentas(int cantVentas) {
 		this.cantVentas = cantVentas;
 	}
+
 	public double getIncentivo() {
 		return incentivo;
 	}
+
 	public void setIncentivo(double incentivo) {
 		this.incentivo = incentivo;
 	}
+
 	@Override
 	public String toString() {
 		return "Vendedor [cantVentas=" + cantVentas + ", incentivo=" + incentivo + "]";
@@ -41,4 +46,11 @@ public class Vendedor extends Empleado{
 		}
 	}
 	
+	public void felicitar(int objetivo) {
+		if(cantVentas>=objetivo) {
+			System.out.println("Felicidades. Has alcanzado el objetivo");
+		}
+	}
+	
+
 }

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Oficina {
 
-	private Empleado [] lista;
+	Empleado [] lista;
 
 	public Oficina(Empleado[] lista) {
 		super();
@@ -41,7 +41,7 @@ public class Oficina {
 		boolean encontrado=false;
 		
 		while(i<lista.length && !encontrado && lista[i]!=null) {
-			if(lista[i].getnEmpleado()==nEmpleado) {
+			if(lista[i].getNumEmpleado()==nEmpleado) {
 				encontrado=true;
 			}else {
 				i++;
@@ -55,5 +55,11 @@ public class Oficina {
 		}
 	}
 	
-	public void 
+	public void comprobarObjetivo(Empleado e, int objetivo) {
+		if (e instanceof Vendedor) {
+			((Vendedor) e).felicitar(objetivo);
+		}
+	}
+	
+	
 }

@@ -4,15 +4,15 @@ public class Empleado {
 
 	private String nombre;
 	private String apellidos;
-	private double sueldoBase;
-	private int nEmpleado;
+	private double sueldoB;
+	private int numEmpleado;
 	
-	public Empleado(String nombre, String apellidos, double sueldoBase, int nEmpleado) {
+	public Empleado(String nombre, String apellidos, double sueldoB, int numEmpleado) {
 		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
-		this.sueldoBase = sueldoBase;
-		this.nEmpleado = nEmpleado;
+		this.sueldoB = sueldoB;
+		this.numEmpleado = numEmpleado;
 	}
 
 	public String getNombre() {
@@ -31,29 +31,29 @@ public class Empleado {
 		this.apellidos = apellidos;
 	}
 
-	public double getSueldoBase() {
-		return sueldoBase;
+	public double getSueldoB() {
+		return sueldoB;
 	}
 
-	public void setSueldoBase(double sueldoBase) {
-		this.sueldoBase = sueldoBase;
+	public void setSueldoB(double sueldoB) {
+		this.sueldoB = sueldoB;
 	}
 
-	public int getnEmpleado() {
-		return nEmpleado;
+	public int getNumEmpleado() {
+		return numEmpleado;
 	}
 
-	public void setnEmpleado(int nEmpleado) {
-		this.nEmpleado = nEmpleado;
+	public void setNumEmpleado(int numEmpleado) {
+		this.numEmpleado = numEmpleado;
 	}
 
 	@Override
 	public String toString() {
-		return "Empleado [nombre=" + nombre + ", apellidos=" + apellidos + ", sueldoBase=" + sueldoBase + ", nEmpleado="
-				+ nEmpleado + "]";
+		return "Empleado [nombre=" + nombre + ", apellidos=" + apellidos + ", sueldoB=" + sueldoB + ", numEmpleado="
+				+ numEmpleado + "]";
 	}
 	
 	public double calcularSueldo() {
-		return sueldoBase;
+		return sueldoB;
 	}
 }

@@ -4,8 +4,8 @@ public class Gerente extends Empleado{
 
 	private double impuestos;
 
-	public Gerente(String nombre, String apellidos, double sueldoBase, int nEmpleado, double impuestos) {
-		super(nombre, apellidos, sueldoBase, nEmpleado);
+	public Gerente(String nombre, String apellidos, double sueldoB, int numEmpleado, double impuestos) {
+		super(nombre, apellidos, sueldoB, numEmpleado);
 		this.impuestos = impuestos;
 	}
 
