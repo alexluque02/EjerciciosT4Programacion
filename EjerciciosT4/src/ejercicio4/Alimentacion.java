@@ -43,4 +43,5 @@ public class Alimentacion extends Producto{
 			System.out.println("Al producto le quedan menos de dos días para caducar");
 		}
 	}
+	
 }

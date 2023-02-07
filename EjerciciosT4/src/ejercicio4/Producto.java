@@ -1,6 +1,6 @@
 package ejercicio4;
 
-public abstract class Producto {
+public abstract class Producto{
 	private int codigo;
 	private String nombre;
 	private double precio;
@@ -42,4 +42,5 @@ public abstract class Producto {
 	}
 	
 	public abstract double calcularPrecio();
+	
 }
