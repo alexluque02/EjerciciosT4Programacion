@@ -1,6 +1,6 @@
 package ejercicio6;
 
-public class Cuenta {//Abstracta es la mejor opción
+public class Cuenta{
 
 	private double saldo;
 	private int id;
@@ -50,4 +50,6 @@ public class Cuenta {//Abstracta es la mejor opción
 	public void retirar(double cant) {
 		saldo-=cant;
 	}
+
+
 }

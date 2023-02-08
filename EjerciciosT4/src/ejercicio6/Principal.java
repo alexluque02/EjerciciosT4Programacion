@@ -7,7 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		int menu, id;
-		double cant;
+		double cant, tope;
 		Cuenta [] lista= new Cuenta[4];
 		Oficina o1;
 		
@@ -58,6 +58,13 @@ public class Principal {
 				break;
 			case 6:
 				System.out.printf("Se ha ganado un total de: %.2f€\n", o1.calcularGanado());
+				break;
+			case 7:
+				System.out.println("Diga usted el tope");
+				tope=Leer.datoDouble();
+				for (int i = 0; i < lista.length; i++) {
+					System.out.println(o1.buscarSaldoMayorQue(tope)[i]);
+				}
 				break;
 			case 0:
 				System.out.println("Saliendo...");

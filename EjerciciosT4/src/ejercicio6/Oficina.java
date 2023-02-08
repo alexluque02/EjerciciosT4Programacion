@@ -2,7 +2,7 @@ package ejercicio6;
 
 import java.util.Arrays;
 
-public class Oficina {
+public class Oficina implements IEstadisticas{
 
 	private Cuenta [] lista;
 
@@ -82,5 +82,16 @@ public class Oficina {
 			}
 		}
 		return suma;
+	}
+
+	@Override
+	public Cuenta[] buscarSaldoMayorQue(double tope) {
+		Cuenta [] aux=new Cuenta[lista.length];
+		for (int i = 0; i < lista.length && lista[i]!=null; i++) {
+			if(lista[i].getSaldo()>tope) {
+				aux[i]=lista[i];
+			}
+		}
+		return aux;
 	}
 }
